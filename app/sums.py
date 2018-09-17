@@ -1,9 +1,15 @@
 def total_sum(numbers):
     total = 0
 
-    for index in range(len(numbers)):
+    index = 0
+    while index < len(numbers):
         if isinstance(numbers[index], list):
-            return total + total_sum(numbers[index])
+            total += total_sum(numbers[index])
+        else:
+            total += numbers[index]
 
-        total += numbers[index]
+        index += 1
     return total
+
+
+print(total_sum([1, 2, 7, 8, [5, 6, 10], 2, [6, 8]]))

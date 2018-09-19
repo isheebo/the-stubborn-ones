@@ -2,13 +2,6 @@ import unittest
 
 from app.power import powers
 
-# pos base pos exp         ✓
-# pos base neg exp         ✓
-# neg base pos exp         ✓
-# neg base neg exp         ✓
-# num pow zero is eq base  ✓
-# num pow itself eq 1      ✓
-
 
 class TestPower(unittest.TestCase):
     def test_works_for_pos_base_and_pos_exp(self):

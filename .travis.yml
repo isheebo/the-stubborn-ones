@@ -5,7 +5,15 @@ python:
 # command to install dependencies
 install:
   - pip3 install -r requirements.txt
+  - pip install pytest-cov
+  - pip install coveralls
 
 # command to run tests
 script:
-  - pytest
+  - pytest --cov=app/
+
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token
+
+after-success:
+  - coveralls

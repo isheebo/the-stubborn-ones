@@ -27,7 +27,7 @@ import re
 
 def is_valid_password(password):
     return re.match(
-        "^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$])[\w\d@#$]{6,12}$",
+        r"^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$])[\w\d@#$]{6,12}$",
         password
     ) is not None
 
